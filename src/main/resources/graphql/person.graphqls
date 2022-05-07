@@ -1,0 +1,35 @@
+type Query{
+    getPersons(pageNumber: Int =1, search: String = ""): [Person!]!
+    getPerson(personId: Int): Person!
+}
+
+type Film{
+    url: String!
+}
+type Specie{
+    url: String!
+}
+type Starship{
+    url: String!
+}
+type Vehicle{
+    url: String!
+}
+type Person{
+    birth_year: String!
+    eye_color: String!
+    films: [Film!]!
+    gender: String!
+    hair_color: String!
+    height: String!
+    homeworld: String!
+    mass: String!
+    name: String!
+    skin_color: String!
+    created: String!
+    edited: String!
+    species: [Specie!]!
+    starships: [Starship]
+    url: String!
+    vehicles: [Vehicle]
+}

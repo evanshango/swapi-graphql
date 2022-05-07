@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: swapi
+app:
+  swapi-base-url: https://swapi.dev/api
