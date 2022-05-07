@@ -1,5 +1,8 @@
+schema {
+    query: Query
+}
 type Query{
-    getPersons(pageNumber: Int =1, search: String = ""): [Person!]!
+    getPersons(page: Int = 1, name: String = ""): PersonResult!
     getPerson(personId: Int): Person!
 }
 
@@ -15,17 +18,24 @@ type Starship{
 type Vehicle{
     url: String!
 }
+type PersonResult{
+    count: Int
+    prevPage: Int
+    nextPage: Int
+    content: [Person]
+}
 type Person{
-    birth_year: String!
-    eye_color: String!
+    id: Int
+    birthYear: String!
+    eyeColor: String!
     films: [Film!]!
     gender: String!
-    hair_color: String!
+    hairColor: String!
     height: String!
-    homeworld: String!
+    homeWorld: String!
     mass: String!
     name: String!
-    skin_color: String!
+    skinColor: String!
     created: String!
     edited: String!
     species: [Specie!]!

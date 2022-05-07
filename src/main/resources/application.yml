@@ -1,5 +1,8 @@
 spring:
   application:
     name: swapi
+graphql:
+  servlet:
+    maxQueryDepth: 20
 app:
   swapi-base-url: https://swapi.dev/api

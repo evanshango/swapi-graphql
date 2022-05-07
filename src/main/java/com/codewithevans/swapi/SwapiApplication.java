@@ -14,7 +14,7 @@ public class SwapiApplication {
     }
 
     @Bean
-    public RestTemplate restTemplate(){
+    public RestTemplate restTemplate() {
         return new RestTemplateBuilder().build();
     }
 }

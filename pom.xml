@@ -31,19 +31,15 @@
         </dependency>
         <!--graphql-->
         <dependency>
-            <groupId>com.graphql-java</groupId>
+            <groupId>com.graphql-java-kickstart</groupId>
             <artifactId>graphql-spring-boot-starter</artifactId>
-            <version>${graphql.version}</version>
+            <version>12.0.0</version>
         </dependency>
         <dependency>
-            <groupId>com.graphql-java</groupId>
-            <artifactId>graphql-java-tools</artifactId>
-            <version>${graphql-java-tools.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.graphql-java</groupId>
+            <groupId>com.graphql-java-kickstart</groupId>
             <artifactId>graphiql-spring-boot-starter</artifactId>
-            <version>${graphql.version}</version>
+            <version>11.1.0</version>
+            <scope>runtime</scope>
         </dependency>
         <!--graphql-->
         <dependency>
