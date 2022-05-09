@@ -1,12 +1,13 @@
-package com.codewithevans.swapi.model;
+package com.codewithevans.swapi.dto;
 
+import com.codewithevans.swapi.model.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -14,27 +15,21 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Person {
+public class PersonDto {
     private int id;
-    @JsonProperty("birth_year")
+    private String name;
     private String birthYear;
-    @JsonProperty("eye_color")
     private String eyeColor;
-    private List<Film> films;
+    private List<Film> films = new ArrayList<>();
     private String gender;
-    @JsonProperty("hair_color")
     private String hairColor;
     private String height;
-    @JsonProperty("homeworld")
-    private String planet;
+    private Planet planet;
     private String mass;
-    private String name;
-    @JsonProperty("skin_color")
     private String skinColor;
     private String created;
     private String edited;
-    private List<Specie> species;
-    private List<Starship> starships;
-    private String url;
+    private List<Specie> species = new ArrayList<>();
+    private List<Starship> starships = new ArrayList<>();
     private List<Vehicle> vehicles;
 }

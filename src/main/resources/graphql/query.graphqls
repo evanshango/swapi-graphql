@@ -1,0 +1,8 @@
+schema {
+    query: Query
+}
+
+type Query{
+    persons(page: Int = 1, name: String = ""): PersonResult
+    person(personId: Int): PersonDto
+}

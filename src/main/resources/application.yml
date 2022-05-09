@@ -4,5 +4,8 @@ spring:
 graphql:
   servlet:
     maxQueryDepth: 20
+    cors:
+      allowed-origins: ${ALLOWED_ORIGINS:http://localhost:4200}
+      allowed-headers: ${ALLOWED_HEADERS:*}
 app:
   swapi-base-url: https://swapi.dev/api

@@ -1,14 +1,3 @@
-schema {
-    query: Query
-}
-type Query{
-    getPersons(page: Int = 1, name: String = ""): PersonResult
-    getPerson(personId: Int): Person
-}
-
-type Film{
-    url: String
-}
 type Specie{
     url: String
 }
@@ -26,13 +15,23 @@ type PersonResult{
 }
 type Person{
     id: Int
+    films: [Film]
+    gender: String
+    height: String
+    planet: String
+    mass: String
+    name: String
+}
+
+type PersonDto{
+    id: Int
     birthYear: String
     eyeColor: String
     films: [Film]
     gender: String
     hairColor: String
     height: String
-    homeWorld: String
+    planet: Planet
     mass: String
     name: String
     skinColor: String
@@ -40,6 +39,5 @@ type Person{
     edited: String
     species: [Specie]
     starships: [Starship]
-    url: String
     vehicles: [Vehicle]
 }
